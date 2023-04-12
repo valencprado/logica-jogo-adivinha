@@ -1,0 +1,46 @@
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function pulaLinha() {
+        document.write("<br>");
+    }
+    function mostra(texto) {
+
+        document.write(texto);
+        pulaLinha();
+    }
+    // implementação 1
+    function sorteia(n) {
+        return Math.round(Math.random() * n);
+    }
+    var numeroPensado = sorteia(10);
+    console.log(numeroPensado);
+    
+    var tentativas = 3;
+    
+    while(tentativas >=1){       
+        var chute = parseInt(prompt("Digite seu chute: "));
+    if(numeroPensado == chute) {
+        mostra("Acertou! Parabéns");
+        break;
+    }
+    else {
+        // implementação 2
+        if(chute > numeroPensado) {
+            mostra("O número que você pensou é maior!");
+        } else {
+            mostra("O número que você pensou é menor!");
+            
+        }
+    }
+    tentativas--;
+}
+
+    mostra("FIM");
+    
+    
+    
+    
+</script>
